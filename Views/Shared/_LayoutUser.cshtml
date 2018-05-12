@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
+    <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" />
+    
+   
+  
+    <!--  Free CSS Template | Designed by TemplateMo.com  -->
+</head>
+<body>
+  
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("index","BookStore")">Bookstrore Of Tung</a>
+            </div>
+            @*nvarbartrai*@
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.Action("GiohangPartial", "Giohang")
+                </li>
+            </ul>
+
+            @*nvarbarphai*@
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="@Url.Action("DangKy","Nguoidung")"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Login","Nguoidung")"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        @*menutrai*@
+        <div class="col-sm-2">
+            <h2>Chủ Đề</h2>
+            @Html.Action("Chude", "BookStore")
+            </br>
+            <h2>Nhà Xuất Bản</h2>
+            @Html.Action("NhaXuatban", "BookStore")
+        </div>
+
+        <div class="col-sm-9">
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+            @*<div id="templatemo_shopping_cart">
+                <a href="@Url.Action("DangKy","Nguoidung")" >Đăng Ký</a> 
+                <a hre="@Url.Action("Login","Nguoidung")" >Đăng Nhập</a> 
+            </div*@>
+
+        @*<div id="templatemo_header">
+            <img src="~/images/templatemo_site_header.jpg" alt="Flower Shop" />
+        </div>
+
+        <div id="templatemo_banner">
+            <a href="#"><img src="~/images/templatemo_banner_image.jpg" alt="Flower Shop - Free Web Template" title="Flower Shop - Free Web Template" border="0" /></a>
+        </div>
+
+        <div id="templatemo_menu_panel">
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="http://www.templatemo.com" target="_parent">Features</a></li>
+                <li><a href="http://www.templatemo.com/page/1" target="_parent">Gallery</a></li>
+                <li><a href="http://www.templatemo.com/page/2" target="_parent">Templates</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div> <!-- end of menu -->
+
+        <div id="templatemo_content">
+            <div class="col-sm-9 col-lg-9 cod-md-9">
+                    <h1>Welcome to Our Book Store</h1>
+                    <h2>New Products</h2>
+                    @RenderBody()
+                    
+             </div> <!-- end of ocntent left -->
+
+                <div class="col-sm-3 col-lg-3 cod-md-3">
+          
+                    <h4>CHỦ ĐỀ SÁCH</h4>
+                    @Html.Action("Chude", "BookStore")
+                    @Html.Action("NhaXuatban" , "BookStore")
+                    
+                </div> <!-- end of content right-->
+
+                <div class="cleaner">&nbsp;</div>
+            </div>
+
+        <div id="templatemo_footer_panel">
+            <div id="footer_left">
+                <img src="~/images/mastercard.gif" alt="Master Card" /><img src="~/images/visa.gif" alt="Visa Card" /><img src="~/images/paypal.gif" alt="PayPal" /><img src="~/images/verisignsecured.gif" alt="Verisign Secured" />
+            </div>
+            <div id="footer_right">
+                Copyright © 2024 <a href="#">Your Company Name</a><br />
+                <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by
+                <a href="http://www.templatemo.com" target="_blank">Free CSS Templates</a>
+            </div>
+
+            <div class="cleaner">&nbsp;</div>
+        </div>*@
+</body>
+</html>

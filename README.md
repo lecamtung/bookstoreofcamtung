@@ -1,2 +1,0 @@
-# bookstoreofcamtung
-lecamtung
